@@ -1,6 +1,6 @@
-name: Super-Linter
+name: scrape
 
-# Run this workflow every time a new commit pushed to your repository
+# Run this workflow on a cron
 on:
   schedule:
     - cron:  '7 7 * * *'
