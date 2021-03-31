@@ -25,7 +25,7 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: get file 
         run: |-
-          curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=2000&sorts%5Binstitution-type%5D=-1' > output.html
+          curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' > output.html
       - name: commit
         run: |-
           git config --global user.email "seanpm92@gmail.com"
