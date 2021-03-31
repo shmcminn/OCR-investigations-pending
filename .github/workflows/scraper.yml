@@ -1,0 +1,36 @@
+name: Super-Linter
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  schedule:
+    - cron:  '7 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  get-file-parent:
+    # Name the Job
+    name: get file
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      # so your job can access it
+      - uses: actions/checkout@main
+
+
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: get file 
+        run: |-
+          curl https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1 | jq . > output.json
+      - name: commit
+        run: |-
+          git config --global user.email "seanpm92@gmail.com"
+          git config --global user.name "shmcminn"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
+          git push
