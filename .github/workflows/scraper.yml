@@ -29,7 +29,7 @@ jobs:
 #           args: 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' 
       - name: get file 
         run: |-
-          curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html' > output.html
+          curl 'https://www.fema.gov/api/open/v1/PublicAssistanceApplicants' > output.html
       - name: commit
         run: |-
           git config --global user.email "seanpm92@gmail.com"
