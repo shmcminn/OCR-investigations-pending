@@ -29,22 +29,7 @@ jobs:
 #           args: 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' 
       - name: get file 
         run: |-
-          curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' \
-          -H 'Connection: keep-alive' \
-          -H 'Pragma: no-cache' \
-          -H 'Cache-Control: no-cache' \
-          -H 'sec-ch-ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"' \
-          -H 'sec-ch-ua-mobile: ?0' \
-          -H 'Upgrade-Insecure-Requests: 1' \
-          -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36' \
-          -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
-          -H 'Sec-Fetch-Site: same-origin' \
-          -H 'Sec-Fetch-Mode: navigate' \
-          -H 'Sec-Fetch-User: ?1' \
-          -H 'Sec-Fetch-Dest: document' \
-          -H 'Accept-Language: en-US,en;q=0.9,la;q=0.8,fy;q=0.7' \
-          -H 'Cookie: UqZBpD3n3iPIDwJU=v1q10tg++CMXq; _ga=GA1.3.1058647045.1612562004; __utmc=47584755; _gid=GA1.3.1391381514.1617211913; __utmz=47584755.1617215322.4.4.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utma=47584755.1058647045.1612562004.1617218387.1617286517.6; _gat_GSA_ENOR0=1; __utmt=1; __utmb=47584755.4.10.1617286517' \
-          --compressed
+          curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1'            -H 'Connection: keep-alive'            -H 'Pragma: no-cache'            -H 'Cache-Control: no-cache'            -H 'sec-ch-ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"'            -H 'sec-ch-ua-mobile: ?0'            -H 'Upgrade-Insecure-Requests: 1'            -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'            -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'            -H 'Sec-Fetch-Site: same-origin'            -H 'Sec-Fetch-Mode: navigate'            -H 'Sec-Fetch-User: ?1'            -H 'Sec-Fetch-Dest: document'            -H 'Accept-Language: en-US,en;q=0.9,la;q=0.8,fy;q=0.7'            -H 'Cookie: UqZBpD3n3iPIDwJU=v1q10tg++CMXq; _ga=GA1.3.1058647045.1612562004; __utmc=47584755; _gid=GA1.3.1391381514.1617211913; __utmz=47584755.1617215322.4.4.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utma=47584755.1058647045.1612562004.1617218387.1617286517.6; _gat_GSA_ENOR0=1; __utmt=1; __utmb=47584755.4.10.1617286517'            --compressed
       - name: commit
         run: |-
           git config --global user.email "seanpm92@gmail.com"
