@@ -9,22 +9,23 @@ soup = BeautifulSoup(resp.text, 'html.parser')
 
 table = soup.select("#oi-table")[0]
 
-header_atags = table.select('thead a')
+header_thtags = table.select('thead  tr  th')
 
 export_data = []
 
 headers = []
 
-for atag in header_atags:
-	headers.append(atag.get_text())
+for thtag in header_thtags:
+	headers.append(thtag.get_text())
 
-rows = table.select('tbody tr')
+rows = table.select('tr')
 
 for row in rows:
 	d = {} 
 	for ind, td in enumerate(row.select('td')):
 		d[headers[ind]] = td.get_text()
-	export_data.append(d)
+	if len(d) > 0:
+		export_data.append(d)
 
 with open("output.html", 'w') as ofile:
 	ofile.write(resp.text)
