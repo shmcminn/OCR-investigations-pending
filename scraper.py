@@ -1,9 +1,13 @@
+print('importing')
 import json
 
 import requests
 from bs4 import BeautifulSoup
+print('finished importing')
 
 resp = requests.get('https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1')
+
+print("made request")
 
 soup = BeautifulSoup(resp.text, 'html.parser')
 
