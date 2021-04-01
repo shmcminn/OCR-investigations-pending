@@ -8,4 +8,4 @@ with open("output.html", 'w') as ofile:
 	ofile.write(resp.text)
 ofile.close()
 
-print('wrote file')
+print(resp.text)
