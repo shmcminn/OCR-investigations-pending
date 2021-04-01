@@ -26,7 +26,7 @@ jobs:
       - name: curl
         uses: wei/curl@master
         with:
-          args: 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' 
+          args: 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html' 
       #- name: get file 
        # run: |-
        # curl 'https://www2.ed.gov/about/offices/list/ocr/docs/investigations/open-investigations/tix.html?perPage=1000&sorts%5Binstitution-type%5D=-1' 
