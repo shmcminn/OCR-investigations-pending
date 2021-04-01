@@ -35,7 +35,7 @@ jobs:
       - name: Install Python dependencies
         run: |-
           pip install -r requirements.txt
-      - name: Write to csv
+      - name: run scraper to output
         run: python scraper.py
 
 
