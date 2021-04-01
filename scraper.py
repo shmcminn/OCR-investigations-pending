@@ -24,7 +24,7 @@ for row in rows:
 	d = {} 
 	for ind, td in enumerate(row.select('td')):
 		d[headers[ind]] = td.get_text()
-
+	export_data.append(d)
 
 with open("output.html", 'w') as ofile:
 	ofile.write(resp.text)
